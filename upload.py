@@ -13,7 +13,10 @@ for r, d, f in os.walk(path):
         if '.mp4' in file:
             files.append(os.path.join(r, file))
 
-for f in files[:1]:
+uploaded_videos = open("uploaded_videos.txt","a")
+
+
+for f in files[5:7]:
     #print(f)
     #print(type(f))
 
@@ -24,8 +27,14 @@ for f in files[:1]:
     tags = "B站, Bilibili"
     #print("Shepherd {} is years old.".format(tags))
 
-    upload_script = 'youtube-upload --title="{}" --tags="{}" --description="{} #B站 #Bilibili" {}'.format(title, tags, title, f)
+    upload_script = 'youtube-upload --title="#B站 #Bilibili {}" --tags="{}" --description="{} #B站 #Bilibili" {}'.format(title, tags, title, f)
     print(upload_script)
     print
     print
+    print("{}.mp4".format(title))
+    #os.system("'{}.mp4' >> uploaded_videos.txt".format(title))
+
     os.system(upload_script)
+
+    uploaded_videos.write(title + "\n")
+uploaded_videos.close()
