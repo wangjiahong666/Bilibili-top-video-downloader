@@ -1,4 +1,6 @@
-curl --request GET \
-  --url https://www.bilibili.com/ranking/all/0/0/30 \
+wget --quiet \
+  --method GET \
   --header 'cache-control: no-cache' \
-  --header 'postman-token: 50a95bd2-245b-384b-b6b0-68000878c071' > result.txt
+  --header 'postman-token: 48c6220c-277f-129a-8d9b-664a98c1283c' \
+  --output-document \
+  - https://www.bilibili.com/ranking/all/0/0/30 > result.txt
