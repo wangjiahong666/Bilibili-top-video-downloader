@@ -1,12 +1,5 @@
 import re
 import os
-import shutil
-# Disk usage
-total, used, free = shutil.disk_usage("/")
-
-print("Total: %d GiB" % (total // (2**30)))
-print("Used: %d GiB" % (used // (2**30)))
-print("Free: %d GiB" % (free // (2**30)))
 
 
 # f7 is the function remove the duplicates of list, but perserve the order of items
@@ -17,7 +10,7 @@ def f7(seq):
 
 
 # Get video id
-with open('result.txt', 'r') as file:
+with open('view-source_https___search.bilibili.com_all_keyword=动物之森&order=click&duration=1&tids_1=0.html', 'r') as file:
     data = file.read().replace('\n', '')
     print(data)
 ids = re.findall('(?:video/)[0-9a-zA-Z]+', data)
@@ -51,17 +44,10 @@ for i in range(len(ids)): #
 	except: 
 		pass
 
-	if titles[i] not in all_downloaded_files_txt:
-		shell_script =  "you-get '"+ url +"' -o downloads"
-		os.system(shell_script)
-		print ("downloaded!")
-	else:
-		pass
+	shell_script =  "you-get '"+ url +"' -o animal_crossing_downloads"
+	os.system(shell_script)
+	print ("downloaded!")
 	print ("\n\n")
-
-	# if free space in device is less than 4 Gigabyte, stop download. 
-	if free // (2**30) < 5:
-		break
 
 print ("we get {} videos and {} titles.".format(len(ids), len(titles)))
 print ("Cheers, Completed !!!!!")
