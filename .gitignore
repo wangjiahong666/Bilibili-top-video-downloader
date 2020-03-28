@@ -3,3 +3,5 @@ result.txt
 *.xml
 *.mp4
 *.download
+*.ts
+*.flv

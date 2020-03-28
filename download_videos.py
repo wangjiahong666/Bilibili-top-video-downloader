@@ -26,6 +26,11 @@ with open('Video_titles.txt', 'w') as f:
         f.write("%s\n" % item)
 
 
+
+# to do： check the space of device is still large enough
+
+
+
 # Download videos
 for i in range(len(ids)): #
 	print ("{} th vodeo, processing and downloading...".format(i))
