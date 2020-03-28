@@ -30,7 +30,10 @@ with open('Video_titles.txt', 'w') as f:
 # to do： check the space of device is still large enough
 
 
-
+#动物之森 #动物森友会 #任天堂 #switch #游戏 #2020游戏 #动森
+"""
+动物之森,动物森友会,任天堂,switch,游戏,2020游戏,动森
+"""
 # Download videos
 for i in range(len(ids)): #
 	print ("{} th vodeo, processing and downloading...".format(i))

@@ -59,7 +59,7 @@ for i in range(len(ids)): #
 		pass
 	print ("\n\n")
 
-	# if free space in device is less than 4 Gigabyte, stop download. 
+	# if free space in device is less than 5 Gigabyte, stop download. 
 	if free // (2**30) < 5:
 		break
 
