@@ -1,3 +1,7 @@
+
+import sys
+
+
 import re
 import os
 import shutil
@@ -39,7 +43,7 @@ with open('Video_titles.txt', 'w') as f:
 
 
 # Download videos
-for i in range(len(ids)): #
+for i in range(3): #(len(ids)): #
 	print ("{} th vodeo, processing and downloading...".format(i))
 	print ("*" * 30)
 	url = "https://www.bilibili.com/" + ids[i]

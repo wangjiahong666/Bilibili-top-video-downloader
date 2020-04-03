@@ -3,6 +3,7 @@
 import re
 import os
 import datetime
+from oauth2client import file
 
 
 path = './'
@@ -17,7 +18,7 @@ for r, d, f in os.walk(path):
 uploaded_videos = open("logs_uploaded_videos.txt","a")
 
 
-for f in files[13:20]:
+for f in files[:20]:
     title = f.replace('./downloads/', '').replace('.mp4', '')
     tags = "B站, Bilibili"
     upload_script = 'youtube-upload --title="#B站 #Bilibili {}" --tags="{}" --description="{} #B站 #Bilibili" {}'.format(title, tags, title, f)
@@ -33,8 +34,8 @@ for f in files[13:20]:
 
 
     # Remove the uploaded video from local file
-    os.system('rm ./downloads/{}'.format(title))
-    print "removed uploaded video: {}".format(title)
+    # os.system('rm ./downloads/{}'.format(title))
+    print ("removed uploaded video: {}".format(title))
 
     
 uploaded_videos.close()
