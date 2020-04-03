@@ -34,7 +34,7 @@ with open('Video_titles.txt', 'w') as f:
 
 
 
-# to do:check the space of device is still large enough
+# to do check the space of device is still large enough
 
 
 
